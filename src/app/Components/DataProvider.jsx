@@ -4,8 +4,9 @@ import { createContext, useContext } from "react";
 const DataContext = createContext();
 
 const dataJson = async () => {
-  const res = await fetch("/data.json");
-  return res.json();
+  const res = await fetch("https://keen-keeper-a7-black.vercel.app/data.json");
+  const data1 = await res.json();
+  return data1;
 };
 const dataPromise = dataJson();
 
