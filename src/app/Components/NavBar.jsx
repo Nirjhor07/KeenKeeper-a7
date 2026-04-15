@@ -26,14 +26,20 @@ const NavBar = () => {
           </li>
           <li>
             <button className="btn btn-success bg-[#244D3F] text-white hidden md:block">
-              <Link href="/" className="flex justify-center items-center gap-2">
+              <Link
+                href="/timeline"
+                className="flex justify-center items-center gap-2"
+              >
                 <CiClock1></CiClock1> Timeline
               </Link>
             </button>
           </li>
           <li>
             <button className="btn btn-success bg-[#244D3F] text-white hidden sm:block">
-              <Link href="/" className="flex justify-center items-center gap-2">
+              <Link
+                href="/starts"
+                className="flex justify-center items-center gap-2"
+              >
                 <ImStatsDots></ImStatsDots> Stats
               </Link>
             </button>

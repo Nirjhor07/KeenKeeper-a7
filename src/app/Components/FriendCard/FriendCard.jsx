@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const FriendCard = ({ f }) => {
-  console.log(f);
+  // console.log(f);
   const { name, status, days_since_contact, picture, tags, priority } = f;
   return (
     <div className="container mx-auto bg-gray-100 ">

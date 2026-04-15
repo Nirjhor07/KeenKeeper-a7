@@ -1,6 +1,4 @@
-import { discoverValidationDepths } from "next/dist/server/app-render/instant-validation/instant-validation";
-import { Suspense } from "react";
-import HomePage from "./Components/HomePage";
+import HomePage from "./homepage/page";
 
 export const metadata = {
   title: "Home Page",
@@ -8,17 +6,5 @@ export const metadata = {
 };
 
 export default function Home() {
-  return (
-    <div>
-      <main className="container mx-auto ">
-        <Suspense
-          fallback={
-            <span className="loading loading-spinner loading-xl"></span>
-          }
-        >
-          <HomePage></HomePage>
-        </Suspense>
-      </main>
-    </div>
-  );
+  return <HomePage />;
 }
