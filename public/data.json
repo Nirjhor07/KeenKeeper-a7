@@ -9,7 +9,8 @@
     "tags": ["college", "close friend"],
     "bio": "Met in university. Love hiking together.",
     "goal": 14,
-    "next_due_date": "2025-07-20"
+    "next_due_date": "2025-07-20",
+    "priority": true
   },
   {
     "id": 2,
@@ -45,7 +46,8 @@
     "tags": ["family"],
     "bio": "Cousin living abroad.",
     "goal": 15,
-    "next_due_date": "2025-07-25"
+    "next_due_date": "2025-07-25",
+    "priority": true
   },
   {
     "id": 5,
@@ -74,7 +76,7 @@
   {
     "id": 7,
     "name": "James Wilson",
-    "picture": "https://images.unsplash.com/photo-1502767089025-6572583495b4",
+    "picture": "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c",
     "email": "james@example.com",
     "days_since_contact": 18,
     "status": "overdue",
@@ -98,7 +100,7 @@
   {
     "id": 9,
     "name": "Noah Taylor",
-    "picture": "https://images.unsplash.com/photo-1509839167058-e439c652e3d1",
+    "picture": "https://images.unsplash.com/photo-1527980965255-d3b416303d12",
     "email": "noah@example.com",
     "days_since_contact": 25,
     "status": "Almost Due",
