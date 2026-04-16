@@ -6,9 +6,20 @@ import { useState } from "react";
 const TimeLineContents = ({ fActivity }) => {
   const { value } = fActivity;
   //function for filter activities useState
-  const [filteredActivity, setFilteredActivity] = useState('');
+  const [filteredActivity, setFilteredActivity] = useState("");
 
-  
+  const filterData = fActivity.filter((item) => {
+    // jodi filter empty thake -> shob show korbe
+    if (!filteredActivity) {
+      // <p>do data </p>
+      // alert('kisu nei')
+      return true;
+    } else {
+      // nahole specific type match korbe
+      return item.value?.toLowerCase() === filteredActivity.toLowerCase();
+    }
+  });
+
   return (
     <div className="min-h-screen bg-base-200 px-6 py-8 mx-auto container">
       {/* Title */}
@@ -36,8 +47,12 @@ const TimeLineContents = ({ fActivity }) => {
       </div>
 
       <div className="space-y-4">
-        {fActivity.map((fCard, index) => (
-          <TcontentsCard key={index} fCard={fCard} filteredActivity={filteredActivity}></TcontentsCard>
+        {filterData.map((fCard, index) => (
+          <TcontentsCard
+            key={index}
+            fCard={fCard}
+            filteredActivity={filteredActivity}
+          />
         ))}
       </div>
     </div>
