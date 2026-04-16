@@ -21,7 +21,10 @@ const Stats = ({ fActivity }) => {
   ];
 
   return (
-    <div className="container mx-auto p-7 flex justify-center items-center">
+  <div className="flex flex-col items-center justify-center gap-4 py-3.5">
+    <h2 className="text-4xl font-bold text-left container">FriendShip Analysis</h2>
+      <div className="container bg-base-200 mx-auto p-7 flex flex-col justify-center items-center gap-4">
+      <p className="text-lg font-semibold container text-green-600">By Interaction Type</p>
       <ResponsiveContainer width="100%" height={400}>
         <PieChart>
           <Tooltip />
@@ -38,6 +41,7 @@ const Stats = ({ fActivity }) => {
         </PieChart>
       </ResponsiveContainer>
     </div>
+  </div>
   );
 };
 
