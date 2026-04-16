@@ -1,7 +1,7 @@
 "use client";
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
 
-const DataContext = createContext();
+export const DataContext = createContext();
 
 const dataJson = async () => {
   const res = await fetch("https://keen-keeper-a7-black.vercel.app/data.json");
@@ -10,13 +10,15 @@ const dataJson = async () => {
 };
 const dataPromise = dataJson();
 
-const data = {
-  dataPromise,
-};
-
 const DataProvider = ({ children }) => {
+  const [fActivity, setFActivity] = useState([]);
+  const data = {
+    dataPromise,
+    fActivity,
+    setFActivity,
+  };
+
   return <DataContext.Provider value={data}>{children}</DataContext.Provider>;
 };
 
-export { DataContext };
 export default DataProvider;

@@ -9,7 +9,7 @@ const FriendDetails = ({ id }) => {
   const datas = use(dataPromise);
 
   const details = datas.find((data) => data.id === parseInt(id));
-  console.log(details);
+  // console.log(details);
 
   return (
     <div className=" bg-base-200 p-6 flex justify-center items-center py-10">

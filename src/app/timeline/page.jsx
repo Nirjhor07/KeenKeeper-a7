@@ -1,12 +1,13 @@
+import TimeLine from "../Components/TimeLine/TimeLine";
 
 export const metadata = {
-    title: 'Timeline'
-}
+  title: "Timeline",
+};
 
 const TimeLinePage = () => {
   return (
     <div>
-      <p>This is time line</p>
+      <TimeLine></TimeLine>
     </div>
   );
 };

@@ -4,11 +4,12 @@ import QuickButton from "../QuickButton/QuickButton";
 import SetCard from "../SetCards/SetCard";
 import { MdMessage } from "react-icons/md";
 import { CiVideoOn } from "react-icons/ci";
-import Link from "next/link";
 import { toast } from "react-toastify";
+import { useContext } from "react";
+import { DataContext } from "../DataProvider";
 
 const ProfileDetailsCard = ({ details }) => {
-  const { days_since_contact, next_due_date, goal, id } = details;
+  const { days_since_contact, next_due_date, goal, name } = details;
 
   // function to format date like figma
   const formatDate = (dateString) => {
@@ -17,8 +18,15 @@ const ProfileDetailsCard = ({ details }) => {
     return date.toLocaleDateString("en-US", options);
   };
 
-  const hadleLinkClick = () => {
-    toast("clicked");
+  // context api calling to use usestate
+  const { fActivity, setFActivity } = useContext(DataContext);
+  // console.log(fActivity)
+
+  // handle btn click and toastify notification
+  const hadleLinkClick = (value, icon) => {
+    const newActivity = { name, value, icon };
+    toast(`${value} with ${name} added to timeline`);
+    setFActivity([...fActivity, newActivity]);
   };
 
   return (
@@ -56,27 +64,24 @@ const ProfileDetailsCard = ({ details }) => {
             </h3>
 
             <div className="grid grid-cols-3 gap-4">
-              <Link
-                onClick={() => hadleLinkClick()}
-                href={`/timeline/${id}`}
+              <div
+                onClick={() => hadleLinkClick("call", <IoCall />)}
                 className="contents"
               >
                 <QuickButton icon={<IoCall />} label="Call" />
-              </Link>
-              <Link
-                onClick={() => hadleLinkClick()}
-                href={`/timeline/${id}`}
+              </div>
+              <div
+                onClick={() => hadleLinkClick("text", <MdMessage />)}
                 className="contents"
               >
                 <QuickButton icon={<MdMessage />} label="Text" />
-              </Link>
-              <Link
-                onClick={() => hadleLinkClick()}
-                href={`/timeline/${id}`}
+              </div>
+              <div
+                onClick={() => hadleLinkClick("video", <CiVideoOn />)}
                 className="contents"
               >
-                <QuickButton id={id} icon={<CiVideoOn />} label="Video" />
-              </Link>
+                <QuickButton icon={<CiVideoOn />} label="Video" />
+              </div>
             </div>
           </div>
         </div>
