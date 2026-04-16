@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# KeenKeeper
 
-## Getting Started
+**A modern web application to manage and track your friendships and relationships.**
 
-First, run the development server:
+Stay connected by monitoring interaction timelines, analyzing communication patterns, and maintaining meaningful relationships with the people who matter most.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Description
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+**KeenKeeper** is a friendship management platform designed to help you stay organized and connected with your social network. Whether you want to track how often you interact with friends, analyze your communication patterns, or simply manage your contacts better—KeenKeeper makes it easy and beautiful.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 3 Key Features
 
-To learn more about Next.js, take a look at the following resources:
+### 1.**Interactive Timeline Tracking**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Log and view all interactions with your friends (calls, texts, videos)
+Organized chronological view of your communication history
+Detailed activity cards showing date, type, and duration
+Quick access to friendspecific interaction history
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 2. **Smart Filtering & Organization**
 
-## Deploy on Vercel
+Filter interactions by type (Calls, Text Messages, Video Calls)
+See all activities at a glance without filter applied
+Responsive interface that adapts to your data
+"No data found" feedback for better UX
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 3. **Friendship Analytics Dashboard**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Beautiful pie chart visualization of interaction distribution
+See which communication types you use most
+Stats overview (Total Friends, On Track, Need Attention, Monthly Interactions)
+Datadriven insights into your friendship patterns
+
+## Technologies Used
+
+| Category               | Technology                                                     |
+| ---------------------- | -------------------------------------------------------------- |
+| **Frontend Framework** | [Next.js 15](https://nextjs.org) - React with App Router       |
+| **Styling**            | [Tailwind CSS](https://tailwindcss.com) - Utility-first CSS    |
+| **UI Components**      | [DaisyUI](https://daisyui.com) - Pre-built Tailwind components |
+| **Data Visualization** | [Recharts](https://recharts.org) - React composable charts     |
+| **Icons**              | [React Icons](https://react-icons.github.io/react-icons)       |
+| **Deployment**         | [Vercel](https://vercel.com) - Serverless platform             |
+
+---
