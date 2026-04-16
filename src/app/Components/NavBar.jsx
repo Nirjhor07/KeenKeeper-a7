@@ -1,9 +1,13 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { CiClock1 } from "react-icons/ci";
 import { ImStatsDots } from "react-icons/im";
 import { TiHomeOutline } from "react-icons/ti";
 
 const NavBar = () => {
+  const pathname = usePathname();
+  console.log(pathname);
   return (
     <div className="navbar bg-base-100 shadow-sm px-10">
       <div className="flex-1">
@@ -15,7 +19,9 @@ const NavBar = () => {
       <div className="flex-none">
         <ul className="menu menu-horizontal px-8 gap-3">
           <li>
-            <button className="btn btn-success bg-[#244D3F] text-white ">
+            <button
+              className={`${pathname == "/" ? "btn btn-success bg-[#244D3F] text-white " : ""}`}
+            >
               <Link
                 href="/"
                 className="flex justify-center items-center gap-2 "
@@ -24,8 +30,10 @@ const NavBar = () => {
               </Link>
             </button>
           </li>
-          <li>
-            <button className="btn btn-success bg-[#244D3F] text-white hidden md:block">
+           <li className="hidden sm:block">
+            <button
+              className={`${pathname == "/timeline" ? "btn btn-success bg-[#244D3F] text-white hidden sm:block" : ""}`}
+            >
               <Link
                 href="/timeline"
                 className="flex justify-center items-center gap-2"
@@ -34,8 +42,10 @@ const NavBar = () => {
               </Link>
             </button>
           </li>
-          <li>
-            <button className="btn btn-success bg-[#244D3F] text-white hidden sm:block">
+          <li className="hidden sm:block">
+            <button
+              className={`${pathname == "/starts" ? "btn btn-success bg-[#244D3F] text-white " : ""}`}
+            >
               <Link
                 href="/starts"
                 className="flex justify-center items-center gap-2"
