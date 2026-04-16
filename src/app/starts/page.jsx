@@ -1,5 +1,7 @@
+import StatsComponent from "../Components/StatsComponent/StatsComponent";
+
 const StartsPage = () => {
-  return <div>This is my starts page</div>;
+  return <StatsComponent></StatsComponent>;
 };
 
 export default StartsPage;
